@@ -1884,3 +1884,19 @@
 2024-11-26 14:12:42 [ANDISOR-API] info: productsController | getProduct called 
 2024-11-26 14:12:42 [ANDISOR-API] info: productServices | getProduct called 
 2024-11-26 14:12:42 [ANDISOR-API] info: productsController | getProduct completed
+2024-11-26 14:17:14 [ANDISOR-API] info: productsController | getProduct called 
+2024-11-26 14:17:14 [ANDISOR-API] info: productServices | getProduct called 
+2024-11-26 14:17:14 [ANDISOR-API] info: productsController | getProduct completed
+2024-11-26 14:17:14 [ANDISOR-API] info: productsController | getProduct called 
+2024-11-26 14:17:14 [ANDISOR-API] info: productServices | getProduct called 
+2024-11-26 14:17:15 [ANDISOR-API] info: productsController | getProduct completed
+2024-11-26 14:17:23 [ANDISOR-API] info: productsController | getProduct called 
+2024-11-26 14:17:23 [ANDISOR-API] info: productServices | getProduct called 
+2024-11-26 14:17:23 [ANDISOR-API] info: productsController | getProduct completed
+2024-11-26 14:17:24 [ANDISOR-API] info: productsController | getProduct called 
+2024-11-26 14:17:24 [ANDISOR-API] info: productServices | getProduct called 
+2024-11-26 14:17:24 [ANDISOR-API] info: productsController | getProduct completed
+2024-11-26 14:19:11 [ANDISOR-API] info: Server is running on port 3000
+2024-11-26 14:19:32 [ANDISOR-API] info: Server is running on port 3000
+2024-11-26 14:19:37 [ANDISOR-API] info: Server is running on port 3000
+2024-11-26 14:19:55 [ANDISOR-API] info: Server is running on port 3000

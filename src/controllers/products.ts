@@ -17,7 +17,7 @@ export const productController = {
     req: Request,
     res: Response,
     next: NextFunction
-  ): Promise<any> => {
+  ): Promise<void> => {
     try {
       logger.info("productsController | getProduct called ");
       const { id } = req.params;
@@ -26,7 +26,7 @@ export const productController = {
 
       const response = await productServices.getProducts(id, page, limit);
       logger.info("productsController | getProduct completed");
-      return res.status(200).json(response);
+      res.status(200).json(response);
     } catch (error) {
       logger.error("productsController | getProduct failed ");
       logger.info(error);
@@ -39,7 +39,7 @@ export const productController = {
    * @description Create a product
    * @returns the created product id with status code
    */
-  createProduct: async (req: Request, res: Response, next:NextFunction): Promise<any> => {
+  createProduct: async (req: Request, res: Response, next:NextFunction): Promise<void> => {
     try {
       logger.info("productsController | createProduct | called");
       const data = req.body;
@@ -48,7 +48,7 @@ export const productController = {
       logger.info("productsController | createProduct | completed");
 
       if (response) {
-        return res.status(200).json(response);
+        res.status(200).json(response);
       }
       else next("Something went wrong");
     } catch (error) {
@@ -63,7 +63,7 @@ export const productController = {
    * @description Update a product
    * @returns  
    */
-  updateProduct: async (req: Request, res: Response, next:NextFunction): Promise<any> => { 
+  updateProduct: async (req: Request, res: Response, next:NextFunction): Promise<void> => { 
     try {
       logger.info("productsController | updateProduct | called");
       const { id } = req.params;
@@ -71,7 +71,7 @@ export const productController = {
       const response = await productServices.updateProduct(id, data);
       logger.info("productsController | updateProduct | completed");
       if (response) {
-        return res.status(200).json({ message: "Product updated successfully", status: 200 }); 
+         res.status(200).json({ message: "Product updated successfully", status: 200 }); 
       }
       else next("Something went wrong");
     } catch(err) {

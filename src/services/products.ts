@@ -17,7 +17,7 @@ export const productServices = {
     id: string,
     page?: string,
     limit?: string
-  ): Promise<any> => {
+  )=> {
     logger.info("productServices | getProduct called ");
 
     //! Get product by id
@@ -73,7 +73,7 @@ export const productServices = {
    * @description Create a product
    * @returns the created product id with status code
    */
-  createProduct: async (data: IProduct): Promise<any> => {
+  createProduct: async (data: IProduct) => {
     logger.info("productServices | createProduct | called");
     const {
       title,
@@ -181,7 +181,7 @@ export const productServices = {
     }
   },
 
-  updateProduct:async (id: string, data: Partial<IProduct>): Promise<any> => {
+  updateProduct:async (id: string, data: Partial<IProduct>)=> {
     logger.info("productServices | updateProduct | called");
     const product = await prisma.products.findUnique({
       where: { id },

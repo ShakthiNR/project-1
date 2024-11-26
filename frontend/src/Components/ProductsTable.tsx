@@ -130,11 +130,11 @@ export const Lists = ({ loading, data, currentPage, limit }: IParams) => {
   );
 };
 
-const VariantListing: React.FC<any> = ({
+const VariantListing: React.FC<IVPrams> = ({
   data,
   isPrimary,
 }: {
-  data: any[];
+  data: IPrimaryVarients[] | ISecondaryVarients[];
   isPrimary: boolean;
 }) => {
   const [id, setId] = useState("");
@@ -176,7 +176,7 @@ const VariantListing: React.FC<any> = ({
               <td>{elm?.inventory}</td>
               <td>{elm?.discountPercentage}</td>
             </tr>
-            {elm?.id === id && <VariantListing data={elm?.secondaryVariants} />}
+            {elm?.id === id && <VariantListing data={(elm as IPrimaryVarients)?.secondaryVariants as IPrimaryVarients[]} isPrimary={false} />}
           </React.Fragment>
         );
       })}
@@ -186,4 +186,5 @@ const VariantListing: React.FC<any> = ({
 
 interface IVPrams {
   data: IPrimaryVarients[];
+  isPrimary: boolean;
 }

@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useCallback } from "react";
 
 
 const Pagination = ({ currentPage, totalPages, onPageChange }: IPagination) => {
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     if (currentPage > 1) onPageChange(currentPage - 1);
-  };
+  },[currentPage, onPageChange]);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     if (currentPage < totalPages) onPageChange(currentPage + 1);
-  };
+  },[currentPage, totalPages, onPageChange]);
 
   const handlePageClick = (page: number) => {
     onPageChange(page);

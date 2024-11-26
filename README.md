@@ -14,7 +14,7 @@
 ```
 
 ```
-Note: 
+Improvement: 
 1. Db scheme optimised solution
 model Product {
   id                   String    @id @default(auto()) @map("_id") @db.ObjectId
@@ -61,4 +61,9 @@ model Variant {
 1. Products listed
 2. Pagination added
 3. Expanding inner components added
+```
+
+```
+Improvements: 
+1. This Expanding inner components can be done by react libraries.
 ```

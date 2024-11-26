@@ -39,7 +39,7 @@ const PaginationList = () => {
   return (
     <>
       {loading ? (
-        <div className="table-container flex-center loader"> Loading ...</div>
+        <div className="table-container flex-center loader"></div>
       ) : (
         <Lists
           loading={loading}

@@ -9,7 +9,7 @@
 
 ```
 1. Prisma ORM create,
-2. Seed the data to mongodb 
+2. Seed the data to mongodb  (npm run seed)
 3. Api endpoints: GET, GET/:id, PUT/:id, POST
 ```
 
@@ -55,7 +55,7 @@ model Variant {
 # Client
 
 - Tech stacks: React Js, Typescript
-- To run the server use npm run dev
+- To run the server cd /frontend and run npm run dev
 
 ```
 1. Products listed

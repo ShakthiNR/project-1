@@ -70,9 +70,9 @@ Improvements:
 
 ### Examples
 
-<img src="https://github.com/user-attachments/assets/ec9b5c7d-df52-4061-b04a-258c4060994d" width="150" height="150" />
-<img src="https://github.com/user-attachments/assets/953b3d14-c751-4b2f-9da7-740ba024bad1" width="150" height="150" />
-<img src="https://github.com/user-attachments/assets/5a2c18c7-e259-404e-a580-126323e35c34" width="150" height="150" />
+<img src="https://github.com/user-attachments/assets/ec9b5c7d-df52-4061-b04a-258c4060994d" width="300" height="300" />
+<img src="https://github.com/user-attachments/assets/953b3d14-c751-4b2f-9da7-740ba024bad1" width="300" height="300" />
+<img src="https://github.com/user-attachments/assets/5a2c18c7-e259-404e-a580-126323e35c34" width="300" height="300" />
 
 
 

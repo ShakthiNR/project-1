@@ -1,0 +1,94 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Products {
+  id                   String            @id @default(auto()) @map("_id") @db.ObjectId
+  title                String
+  price                Float
+  discountPercentage   Float
+  inventory            String
+  active               Boolean
+  leadTime             String
+  description          String
+  category             String
+  image                String
+  primaryVariantName   String
+  secondaryVariantName String
+  primaryVariants      PrimaryVariants[]
+  createdAt            DateTime          @default(now())
+  updatedAt            DateTime          @updatedAt
+}
+
+model PrimaryVariants {
+  id                 String              @id @default(auto()) @map("_id") @db.ObjectId
+  name               String
+  price              Float
+  discountPercentage Float
+  inventory          Int
+  active             Boolean
+  productId          String              @db.ObjectId
+  secondaryVariants  SecondaryVariants[]
+
+  product   Products @relation(fields: [productId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SecondaryVariants {
+  id                 String @id @default(auto()) @map("_id") @db.ObjectId
+  name               String
+  price              Float
+  discountPercentage Float
+  inventory          Int
+  primaryVariantId   String @db.ObjectId
+
+  primaryVariant PrimaryVariants @relation(fields: [primaryVariantId], references: [id])
+  createdAt      DateTime        @default(now())
+  updatedAt      DateTime        @updatedAt
+}
+
+
+//! This is the actual schema for this project
+// model Product {
+//   id                   String    @id @default(auto()) @map("_id") @db.ObjectId
+//   title                String
+//   price                Float
+//   discountPercentage   Float
+//   inventory            Int
+//   active               Boolean
+//   leadTime             String
+//   description          String
+//   category             String
+//   image                String
+//   primaryVariantName   String
+//   secondaryVariantName String
+//   productVariants      Variant[] @relation("ProductVariants") // One-to-many relation with Variant
+// }
+
+// model Variant {
+//   id                 String   @id @default(auto()) @map("_id") @db.ObjectId
+//   name               String
+//   price              Float
+//   discountPercentage Float
+//   inventory          Int
+//   active             Boolean? // Nullable if needed
+//   product            Product? @relation("ProductVariants", fields: [productId], references: [id]) // Back-reference to Product
+//   productId          String?  @db.ObjectId
+
+//   primaryVariants Variant[] @relation("primaryVariants") // One-to-many relation with Variant
+//   primaryVariant  Variant @relation("primaryVariants", fields: [primaryVariantId], references: [id], onDelete: NoAction, onUpdate: NoAction) // Self-referencing relation
+
+//   primaryVariantId String @db.ObjectId
+// }

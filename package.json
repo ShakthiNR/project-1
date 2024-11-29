@@ -4,6 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon",
+    "build": "npx tsc",
     "seed": "ts-node src/helpers/script.ts"
   },
   "keywords": [],

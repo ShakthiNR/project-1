@@ -1,7 +1,7 @@
-### ANDISOR PROJECT
+# ANDISOR PROJECT
 
 
-# Server
+### Server
 
 - Tech stacks: Express Js, Typescript, Mongo Db, Prisma
 - To run the server use npm run dev
@@ -52,7 +52,7 @@ model Variant {
 ```
 
 
-# Client
+### Client
 
 - Tech stacks: React Js, Typescript
 - To run the server cd /frontend and run npm run dev
@@ -67,3 +67,13 @@ model Variant {
 Improvements: 
 1. This Expanding inner components can be done by react libraries.
 ```
+
+### Examples
+
+![img1](https://github.com/user-attachments/assets/312a1750-08b6-48e9-bff2-ad3a85d0e285)
+![img-2](https://github.com/user-attachments/assets/857bf8a1-030e-47ed-aef4-2e94239da7d0)
+![img-3](https://github.com/user-attachments/assets/b627f851-1cca-43f9-8435-566104706920)
+
+
+
+

@@ -1,6 +1,6 @@
 import logger from "@/infrastructure/logger";
 import { PrismaClient } from "@prisma/client";
-import * as jsonData from "../../public/Dummy API.json";
+import * as jsonData from "../../data/Dummy API.json";
 
 const prisma = new PrismaClient();
 const Process = "Migrate data from json to db";

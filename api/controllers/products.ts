@@ -1,6 +1,6 @@
 import logger from "@/infrastructure/logger";
 import { Response, Request, NextFunction } from "express";
-import { prisma } from "../..";
+import { prisma } from "..";
 import { IPrimaryVarients } from "@/types/products";
 import { productServices } from "@/services";
 

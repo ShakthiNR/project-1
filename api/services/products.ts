@@ -1,6 +1,6 @@
 import logger from "@/infrastructure/logger";
 import { Response, Request } from "express";
-import { prisma } from "../..";
+import { prisma } from "..";
 import { IPrimaryVarients, IProduct } from "@/types/products";
 import { CustomError } from "@/middlewares/errorHandling";
 import { ObjectId } from "mongodb";

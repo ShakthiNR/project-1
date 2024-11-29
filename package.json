@@ -4,18 +4,27 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx nodemon",
-    "build": "npx tsc",
-    "seed": "ts-node src/helpers/script.ts"
+    "seed": "ts-node src/helpers/script.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
+  "pre-commit": [
+      "ts.check",
+      "build",
+      "add-build"
+  ],
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.3",
     "@types/winston": "^2.4.4",
     "nodemon": "^3.1.7",
+    "pre-commit": "^1.0.10",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.2"

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { IPrimaryVarients, IProduct } from "../types/products";
+import  { useEffect, useState } from "react";
+import { IProduct } from "../types/products";
 import Pagination from "./Pagination";
 import "./Pagination.css";
 import { Lists } from "./ProductsTable";
@@ -10,7 +10,7 @@ const PaginationList = () => {
   const [data, setData] = useState<IProduct[]>([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [limit, setLimit] = useState(LIMIT);
+  const [limit] = useState(LIMIT);
   const [totalPages, setTotalPages] = useState(0);
 
   const handlePageChange = (page: number) => {

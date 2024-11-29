@@ -22,7 +22,7 @@ const PaginationList = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `http://localhost:3000/api/v1/products?page=${currentPage}&limit=${limit}`
+          `${import.meta.env.VITE_BACKEND_URL}/products?page=${currentPage}&limit=${limit}`
         );
         const items = await response.json();
         setLoading(false);

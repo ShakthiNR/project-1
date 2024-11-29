@@ -1,9 +1,11 @@
 {
   "name": "project",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "descption": "Andisor project",
   "main": "index.ts",
   "scripts": {
     "dev": "npx nodemon api/index.ts",
+    "build": "npm install && tsc",
     "seed": "ts-node api/helpers/script.ts"
   },
   "keywords": [],

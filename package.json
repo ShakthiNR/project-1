@@ -1,7 +1,7 @@
 {
   "name": "project",
   "version": "2.0.0",
-  "descption": "Andisor project - deployed",
+  "description": "Andisor project - deployed",
   "main": "index.ts",
   "scripts": {
     "dev": "npx nodemon api/index.ts",
@@ -11,7 +11,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.9.3",

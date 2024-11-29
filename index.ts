@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request } from "express";
 import { PORT } from "@/secrets";
 import rootRouter from "@/routes";
 import { PrismaClient } from "@prisma/client";
@@ -9,8 +9,8 @@ const app = express();
 const cors = require('cors')
 
 app.use(cors());
-app.get("/", ()=> {
-  console.log("Hello World")
+app.get("/", (req:Request, res:any)=> {
+  return res.status(200).json({message: "Welcome to the API"})
 })
 app.use("/api", rootRouter);
 
